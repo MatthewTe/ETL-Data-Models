@@ -23,8 +23,8 @@ With each individual listing having a listings page in the format shown below, n
 ![Image Not Found](https://github.com/MatthewTe/ETL-Data-Models/blob/master/resources/Kijiji%20Individual%20Listing%20example.PNG "Example of an individual listings page")
 
 The Kijiji data model is relatively simple and is contained within a single python object: Kijiji(). The simplicity of this object makes the majority of is processes self explanatory from internal documentation. That being said there is one unorthodox processes should be described:
-
-#### *The href parser method: Kijiji.href_parser(href)
+ 
+- #### The href parser method: Kijiji.href_parser(href)
 
 The in-depth function of the href method can be understood by reading the internal method documentation. The main goal of the method is to extract the key raw data about an individual listing given a link to its main page. The raw data it extracts are:
 * Address
