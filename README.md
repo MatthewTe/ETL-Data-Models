@@ -4,3 +4,7 @@ This repository is a collection of various data models that I have written for u
 The main purpose of this repository is for me to document the processes of each data model and how they were integrated into my data pipelines as a way of ensuring that I am able to return to and maintain my pipelines
 
 ## Table of Contents
+### [Public Online Real Estate Listings Data Models] 
+
+
+#### Online Real Estate Data Models
