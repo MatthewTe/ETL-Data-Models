@@ -16,7 +16,9 @@ Most of these data models revolve around the extraction of raw data from online 
 The Kijiji data model is relatively simple and is contained within a single python object: Kijiji(). The simplicity of this object makes the majority of is processes self explanatory from internal documentation. That being said there are two main key methods who's processes should be described:
 
 #### 1. The href parser method: Kijiji.href_parser(href)
-A Kijiji listings page is structured as such 
+A Kijiji listings page is structured as such:
+![Image Not Found](https://github.com/MatthewTe/ETL-Data-Models/blob/master/resources/Kijiji%20listings%20example.PNG "Example of a Kijiji Real Estate listings page")
+
 
 #### 2. The page to dataframe method: Kijiji.page_to_dataframe(url)
 
