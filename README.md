@@ -59,3 +59,9 @@ The method solves this problem in the following way:
 ```
 
 By building a dictionary that stores the attribute values and assigns them to attribute keys in the unqiue order that they are scraped from each page ensures that a change in attribute order from page to page does not create errors with webscraping as each attribute is stored based on its current order and the values can be retrived using the dict keys.     
+
+The rest of the data model is self explanatory from the documentation and the source code. It parses a set number of listings pages, collects the key raw data from each individual listing and appends each listing into a main dataframe with the following schema:
+
+| Address| Price | Date           | Bedrooms        |Bathrooms       | Size           |
+| -------| ----- | --------------| -----------------|----------------|----------------|
+| string | string| Datetime object | Integer/String | Integer/String | Integer/String |
