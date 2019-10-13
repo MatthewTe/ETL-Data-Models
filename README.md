@@ -26,6 +26,42 @@ The Kijiji data model is relatively simple and is contained within a single pyth
 
 #### 1. The href parser method: Kijiji.href_parser(href)
 
+The in-depth function of the href method can be understood by reading the internal method documentation. The main goal of the method is to extract the key raw data about an individual listing given a link to its main page. The raw data it extracts are:
+* Address
+* Price
+* Number of Bedrooms
+* Number of Bathrooms
+* Size in SquareFeet
+
+The Address and Price data are self explanatory and are nested within easily searchable html tags with bs4. The issue arrises with the remaining three data points. A user must enter a price and an address to post a listing, making web scraping very simple. The remaining attributes are optional and can be posted with no specific order within the relevant attribute tags. This can complicate scraping as the orders of each attribute may change or not be there at all. Preventing the text from a specific attribute containter to simply be scraped and assinged to a variable as is the case with Address for example.
+
+The method solves this problem in the following way:
+
+```python
+# Number of Beds, Bathrooms and Square Feet:
+        attribute_tags = soup.findAll('dt', {'class': 'attributeLabel-240934283'})
+        attribute_values = soup.findAll('dd', {'class': 'attributeValue-2574930263'})
+
+        # Creating a dictionary that will store the various attributes independent
+        # of there listing order on the website:
+        attributes_dict = {}
+
+        # Itterative loop appending attribute data to attributes_dict:
+        counter = 0 # Counter to track attribute_values in loop
+        for attribute in attribute_tags:
+
+            attribute_instance = {attribute.text : attribute_values[counter].text}
+
+            counter = counter + 1
+
+            # adding values to main dict:
+            attributes_dict.update(attribute_instance)
+```
+
+By building a dictionary that stores the attribute values and assigns them to attribute keys in the unqiue order that they are scraped from each page ensures that a change in attribute order from page to page does not create errors with webscraping as each attribute is stored based on its current order and the values can be retrived using the dict keys.     
+
+
+
 #### 2. The page to dataframe method: Kijiji.page_to_dataframe(url)
 
 
