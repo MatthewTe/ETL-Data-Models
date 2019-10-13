@@ -64,4 +64,4 @@ The rest of the data model is self explanatory from the documentation and the so
 
 | Address| Price | Date           | Bedrooms        |Bathrooms       | Size           |
 | -------| ----- | --------------| -----------------|----------------|----------------|
-| string | string| Datetime object | Integer/String | Integer/String | Integer/String |
+| String | String| Datetime object | Integer/String | Integer/String | Integer/String |
