@@ -13,7 +13,7 @@ Most of these data models revolve around the extraction of raw data from online 
 ### Kijiji.ca Listings Data Model
 [Kijiji.ca](https://www.kijiji.ca) is a canadian online store where users can post listings for item the wish to sell. There are many Real Estate listings from users attempting to sell or rent Real Estate. This model was built as a means of extracting raw data directly from Kijiji's public Real Estate listings data based on common python webscraping packages such as Beautiful Soup and requests.
 
-## Kijiji Webpage Structure
+#### Kijiji Webpage Structure
 A Kijiji listings page is structured as such:
 ![Image Not Found](https://github.com/MatthewTe/ETL-Data-Models/blob/master/resources/Kijiji%20listings%20example.PNG "Example of a Kijiji Real Estate listings page")
 
