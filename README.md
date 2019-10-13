@@ -13,12 +13,19 @@ Most of these data models revolve around the extraction of raw data from online 
 ### Kijiji.ca Listings Data Model
 [Kijiji.ca](https://www.kijiji.ca) is a canadian online store where users can post listings for item the wish to sell. There are many Real Estate listings from users attempting to sell or rent Real Estate. This model was built as a means of extracting raw data directly from Kijiji's public Real Estate listings data based on common python webscraping packages such as Beautiful Soup and requests.
 
-The Kijiji data model is relatively simple and is contained within a single python object: Kijiji(). The simplicity of this object makes the majority of is processes self explanatory from internal documentation. That being said there are two main key methods who's processes should be described:
-
-#### 1. The href parser method: Kijiji.href_parser(href)
+## Kijiji Webpage Structure
 A Kijiji listings page is structured as such:
 ![Image Not Found](https://github.com/MatthewTe/ETL-Data-Models/blob/master/resources/Kijiji%20listings%20example.PNG "Example of a Kijiji Real Estate listings page")
 
 
+With each individual listing having a listings page in the format shown below, navigated to via an embeded href link within the titles of each listing on the listings page shown above:
+
+![Image Not Found](https://github.com/MatthewTe/ETL-Data-Models/blob/master/resources/Kijiji%20Individual%20Listing%20example.PNG "Example of an individual listings page")
+
+The Kijiji data model is relatively simple and is contained within a single python object: Kijiji(). The simplicity of this object makes the majority of is processes self explanatory from internal documentation. That being said there are two main key methods who's processes should be described:
+
+#### 1. The href parser method: Kijiji.href_parser(href)
+
 #### 2. The page to dataframe method: Kijiji.page_to_dataframe(url)
+
 
