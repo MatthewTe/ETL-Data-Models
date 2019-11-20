@@ -5,6 +5,7 @@ The main purpose of this repository is for me to document the processes of each 
 
 ## Table of Contents
 * [Online Real Estate Listings Data Models](https://github.com/MatthewTe/ETL-Data-Models/blob/master/README.md#online-real-estate-data-models)
+* [Cmd Line Ping Extraction and Logging Data Model]()
 
 
 ## Online Real Estate Data Models
@@ -65,3 +66,5 @@ The rest of the data model is self explanatory from the documentation and the so
 | Address| Price | Date           | Bedrooms        |Bathrooms       | Size           |
 | -------| ----- | --------------| -----------------|----------------|----------------|
 | String | String| Datetime object | Integer/String | Integer/String | Integer/String |
+
+## Cmd Line Ping Extraction and Logging Data Model
