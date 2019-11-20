@@ -5,7 +5,7 @@ The main purpose of this repository is for me to document the processes of each 
 
 ## Table of Contents
 * [Online Real Estate Listings Data Models](https://github.com/MatthewTe/ETL-Data-Models/blob/master/README.md#online-real-estate-data-models)
-* [Cmd Line Ping Extraction and Logging Data Model]()
+* [Cmd Line Ping Extraction and Logging Data Model](https://github.com/MatthewTe/ETL-Data-Models/blob/master/README.md#cmd-line-ping-extraction-and-logging-data-model)
 
 
 ## Online Real Estate Data Models
