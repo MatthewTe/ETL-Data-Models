@@ -6,6 +6,7 @@ The main purpose of this repository is for me to document the processes of each 
 ## Table of Contents
 * [Online Real Estate Listings Data Models](https://github.com/MatthewTe/ETL-Data-Models/blob/master/README.md#online-real-estate-data-models)
 * [Cmd Line Ping Extraction and Logging Data Model](https://github.com/MatthewTe/ETL-Data-Models/blob/master/README.md#cmd-line-ping-extraction-and-logging-data-model)
+* Statistical Data Validation Models
 
 
 ## Online Real Estate Data Models
@@ -68,3 +69,28 @@ The rest of the data model is self explanatory from the documentation and the so
 | String | String| Datetime object | Integer/String | Integer/String | Integer/String |
 
 ## Cmd Line Ping Extraction and Logging Data Model
+TODO: Add Cmd Line Ping Extraction and Logging Data Model Readme.md
+## Statistical Data Validation Models
+This python package, like most other scripts in this repository will be used in other projects and repository to validate and perform tests on data sets. These tests will primarily be for describing the qualities of datasets or for confirming that datasets meet certain criteria for other analysis that will be performed later on in a project. 
+### Normality Testing
+The script normaility_testing.py contains various objects and methods for testing if a dataset conforms to a normal or Gaussian distribution. It contains methods that perform both visual and statistical tests that indicate whether or not a dataset is normal enough for parametric tests to be performed accurately. 
+
+The tests are stored within an object normality_validation() and are performed upon initialization of the object with the data to be tested in a pandas dataframe. The outputs of this object can be grouped into two main categories:
+* Visual 
+* Statistical
+
+The results of the visual tests are output as a matplotlib figure, with each test occurring on the figure within its own axis.
+
+The results of the statistical tests are compiled into a dataframe as well as a boolean value indicating if a test was significant. This dataframe is output to the console.
+
+The Visual Normality Tests that are performed on the dataset are:
+* Histogram Plots
+* Quantile-Quantile Plot
+
+The Statistical Tests that are performed on the dataset are:
+* Shapiro-Wilk Test
+* D’Agostino’s K^2 Test
+* Anderson-Darling Test
+* Kolmogorov–Smirnov
+
+
