@@ -89,9 +89,8 @@ The Visual Normality Tests that are performed on the dataset are:
 
 The Statistical Tests that are performed on the dataset are:
 * Shapiro-Wilk Test
-* D’Agostino’s K^2 Test
-* Anderson-Darling Test
 * Kolmogorov–Smirnov
 
 ### Example Output From Normality Test of a Dataset:
+This is an example of the output of the normality_validation object if it is implemented in data pipeline:
 
