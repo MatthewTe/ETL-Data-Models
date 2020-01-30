@@ -12,9 +12,6 @@ import matplotlib.pyplot as plt
 import warnings
 
 
-# Generating a random DataFrame that has a normal distribution for testing
-normal_test_data = pd.DataFrame(np.random.randn(100, 1), columns=list('A'))
-
 # Creating custom data validation warnings class:
 class Data_Validation_Warning(UserWarning):
     pass
@@ -203,9 +200,3 @@ distribution- Data may not be normally distributed',
                             'Gaussian indicator': Gaussian_bool }
 
         return smirnov_test_dict
-
-
-
-
-alpha = 0.05
-normality_validation(normal_test_data, alpha)
