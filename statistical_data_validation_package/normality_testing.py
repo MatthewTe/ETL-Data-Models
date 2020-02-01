@@ -16,6 +16,9 @@ import warnings
 class Data_Validation_Warning(UserWarning):
     pass
 
+# Test data:
+df = pd.DataFrame(np.random.randn(100, 4), columns=list('ABCD'))
+
 class normality_validation(object):
     """
     The normality_validation object is designed to perform visual and
@@ -51,7 +54,7 @@ class normality_validation(object):
 
         """
         # Declaring instance variables:
-        self.data = input_data
+        self.data = input_data  # Converting df column to array
         self.alpha = alpha
 
         # Initalizing statistical normality tests:
@@ -102,11 +105,11 @@ distribution- Data may not be normally distributed',
         ax1 = fig.add_subplot(gs[0,0])
         #ax1.set_title('Histogram')
         self.data.hist(grid=True, ax=ax1)
-        plt.title(list(self.data)[0] + ' Column Data Histogram ')
+        plt.title(self.data.name + ' Column Data Histogram ')
 
         # Creating a Q-Q plot as ax2:
         ax2 = fig.add_subplot(gs[0,1])
-        ax2.set_title(list(self.data)[0] + ' Column Data Q-Q Plot')
+        ax2.set_title(self.data.name + ' Column Data Q-Q Plot')
         sm.qqplot(self.data, scale=3,line='s', ax=ax2) # TODO:: Look into QQ, question accuracy
 
         # Adding summary_df table from __init__ method:
@@ -200,3 +203,7 @@ distribution- Data may not be normally distributed',
                             'Gaussian indicator': Gaussian_bool }
 
         return smirnov_test_dict
+
+
+
+normality_validation(df['A'], 0.05)
