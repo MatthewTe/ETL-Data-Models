@@ -16,9 +16,6 @@ import warnings
 class Data_Validation_Warning(UserWarning):
     pass
 
-# Test data:
-df = pd.DataFrame(np.random.randn(100, 4), columns=list('ABCD'))
-
 class normality_validation(object):
     """
     The normality_validation object is designed to perform visual and
@@ -72,14 +69,14 @@ class normality_validation(object):
 
         # Raises Warnings if data failes Gaussian Validation tests:
         if shapiro_wilk['Gaussian indicator'] != True:
-            warnings.warn('Data does not pass Shapiro-Wilk Test of Gaussian\
+            warnings.warn('Data does not pass Shapiro-Wilk Test of Gaussian \
 distribution- Data may not be normally distributed',
              Data_Validation_Warning)
         else:
             pass
 
         if kol_smirnov['Gaussian indicator'] != True:
-            warnings.warn('Data does not pass Kolmogorov-Smirnov Test of Gaussian\
+            warnings.warn('Data does not pass Kolmogorov-Smirnov Test of Gaussian \
 distribution- Data may not be normally distributed',
              Data_Validation_Warning)
 
@@ -97,7 +94,7 @@ distribution- Data may not be normally distributed',
         '''
 
         # Declaring the number of axis for subplots:
-        fig = plt.figure()
+        fig = plt.figure('Normality Test Summary for ' + self.data.name + ' Data ')
         # adding gridspec:
         gs = fig.add_gridspec(2, 2)
 
@@ -203,7 +200,3 @@ distribution- Data may not be normally distributed',
                             'Gaussian indicator': Gaussian_bool }
 
         return smirnov_test_dict
-
-
-
-normality_validation(df['A'], 0.05)
