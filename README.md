@@ -103,4 +103,4 @@ alpha = 0.05
 normality(data, alpha)
 ```
 #### Output
-
+![Image Not Found](https://github.com/MatthewTe/ETL-and-Statistical-Model-Validation-Packages/blob/master/resources/Normality_model_example.PNG)
