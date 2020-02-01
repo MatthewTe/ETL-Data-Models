@@ -93,4 +93,14 @@ The Statistical Tests that are performed on the dataset are:
 
 ### Example Output From Normality Test of a Dataset:
 This is an example of the output of the normality_validation object if it is implemented in data pipeline:
+#### Input
+```python
+# Importing Normality Package:
+from statistical_data_validation_package import normality_testing as normality
+
+# Executing normality object:
+alpha = 0.05
+normality(data, alpha)
+```
+#### Output
 
