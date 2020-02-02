@@ -100,7 +100,7 @@ from statistical_data_validation_package import normality_testing as normality
 
 # Executing normality object:
 alpha = 0.05
-normality(data, alpha)
+normality(data, alpha, True) # A boolean indicator that activates or de-activates the plot function for the visual tests.
 ```
 #### Output
 ![Image Not Found](https://github.com/MatthewTe/ETL-and-Statistical-Model-Validation-Packages/blob/master/resources/Normality_model_example.PNG)
